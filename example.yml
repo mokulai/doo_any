@@ -1,0 +1,33 @@
+--- # 通用描述
+Title: Example 接口文档
+Description: ''
+Version: '1.0'
+BasePath: http://example.com
+REQUEST_Headers:
+  Content-Type: application/json;charset=utf-8
+RESPONSE_Headers:
+  Content-Type: application/json
+
+--- # any mock
+Name: AnyMock
+Desc: any参数的demo
+Path: /api/any
+Method: GET
+Auth: None
+
+REQUEST:
+  Body:
+    id: [int, Y, 随机id, '']
+
+RESPONSE:
+  Headers:
+    Content-Type: application/json
+  Body:
+    Body: [json, Y, 报文Body, json格式]
+
+DATA1:
+  REQUEST:
+    orderNo: any
+  RESPONSE:
+    error_code: "0"
+    error_msg: 查询成功
